@@ -9,7 +9,7 @@ resource "random_shuffle" "esxi_6_license" {
 }
 resource "vsphere_host" "esxi" {
   connected  = var.connected
-  hostname   = var.hostname
+  hostname   = var.ip == "" ? local.fqdn : var.ip
   license    = local.license
   password   = var.password
   thumbprint = sensitive(data.vsphere_host_thumbprint.thumbprint.id)
