@@ -1,5 +1,5 @@
 data "vsphere_host_thumbprint" "thumbprint" {
-  address  = join(".", [var.hostname, var.domain])
+  address  = var.hostname
   port     = var.port
   insecure = var.insecure
 }
