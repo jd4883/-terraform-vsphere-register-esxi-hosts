@@ -3,6 +3,12 @@ variable "datacenter_id" { default = null }
 variable "hostname" { type = string }
 variable "network_interfaces" { type = list(string) }
 variable "password" { type = string }
+variable "ip" { 
+  type = string 
+  default = ""
+}
+
+variable "password" { type = string }
 
 variable "esxi-7-license-name" {
   type        = list(string)
