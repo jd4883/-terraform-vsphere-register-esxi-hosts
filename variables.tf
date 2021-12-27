@@ -8,8 +8,6 @@ variable "ip" {
   default = ""
 }
 
-variable "password" { type = string }
-
 variable "esxi-7-license-name" {
   type        = list(string)
   description = "This is the default value to check for when assigning license keys; my design uses hosts with ESXI 6 and with 7 so I created values to account for both that can be remapped if preferred to align to licenses you have to work with"
