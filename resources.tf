@@ -17,4 +17,5 @@ resource "vsphere_host" "esxi" {
   cluster    = var.cluster_id != "" ? var.cluster_id : ""
   username   = var.username
   force      = var.force
+  lifecycle { ignore_changes = [thumbprint] }
 }
