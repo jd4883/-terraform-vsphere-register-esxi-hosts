@@ -1,5 +1,5 @@
 data "vsphere_host_thumbprint" "thumbprint" {
-  address  = var.hostname
+  address  = var.ip
   port     = var.port
   insecure = var.insecure
 }
